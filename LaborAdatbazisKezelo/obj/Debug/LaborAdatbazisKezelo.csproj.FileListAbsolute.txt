@@ -6,3 +6,11 @@ C:\Users\Thinkpad\Desktop\LaborAdatbazisKezelo\LaborAdatbazisKezelo\bin\Debug\La
 C:\Users\Thinkpad\Desktop\LaborAdatbazisKezelo\LaborAdatbazisKezelo\bin\Debug\LaborAdatbazisKezelo.pdb
 C:\Users\Thinkpad\Desktop\LaborAdatbazisKezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.exe
 C:\Users\Thinkpad\Desktop\LaborAdatbazisKezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.pdb
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\bin\Debug\LaborAdatbazisKezelo.exe.config
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.exe
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.pdb
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\bin\Debug\LaborAdatbazisKezelo.exe
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\bin\Debug\LaborAdatbazisKezelo.pdb
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.csprojResolveAssemblyReference.cache
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.Properties.Resources.resources
+D:\Git\Labor-adatbazis-kezelo\LaborAdatbazisKezelo\obj\Debug\LaborAdatbazisKezelo.csproj.GenerateResource.Cache

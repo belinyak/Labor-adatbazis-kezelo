@@ -13,6 +13,7 @@ namespace LaborAdatbaziKezelo
     class Form_AdatbázisKezelő: Form
     {
         public static string server = ".\\SQLEXPRESS";
+        public static bool integrated_security = false;
         public static string labor_database = "Labor";
         public static string sql_username = "labor";
         public static string sql_password = "labor";
@@ -28,7 +29,7 @@ namespace LaborAdatbaziKezelo
             InitializeForm();
             Configurate();
             string LaborConnectionString = @"Data Source=" + server + ";Initial Catalog=" +
-                           labor_database + ";User ID=" + sql_username + ";Password=" + sql_password + ";Integrated Security=true;";
+                labor_database + ";User ID=" + sql_username + ";Password=" + sql_password + ";" + (integrated_security ? "Integrated Security=true;" : "");
             laborconnection = new SqlConnection(LaborConnectionString);
             laborconnection.Open();
             InitilizeContent();
@@ -194,6 +195,7 @@ namespace LaborAdatbaziKezelo
                                 {
                                     case "server": server = arguments[1]; break;
                                     case "labor_database": labor_database = arguments[1]; break;
+                                    case "integrated_security": integrated_security = true; break;
                                     case "sql_username": sql_username = arguments[1]; break;
                                     case "sql_password": sql_password = arguments[1]; break;
                                 }
