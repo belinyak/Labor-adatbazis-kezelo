@@ -40,7 +40,7 @@ namespace LaborAdatbaziKezelo
             Text = "Adatbázis Kezelő";
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            ClientSize = new Size(312, 256);
+            ClientSize = new Size(312, 306);
             StartPosition = FormStartPosition.CenterScreen;
             MinimumSize = ClientSize;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -96,14 +96,47 @@ namespace LaborAdatbaziKezelo
             csere.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
             csere.Text = "tinyint->smallint";
             csere.Size = new System.Drawing.Size(96, 32);
-            csere.Location = new Point(ClientRectangle.Width - csere.Size.Width - 92 - rendben.Width, ClientRectangle.Height - csere.Size.Height - 16);
+            csere.Location = new Point(ClientRectangle.Width - csere.Size.Width - 92 - rendben.Width, ClientRectangle.Height - csere.Size.Height - 64);
             csere.Click += csere_Click;
 
+            Button minbiz = new Button();
+            minbiz.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
+            minbiz.Text = "MinBiz fix szöveg ";
+            minbiz.Size = new System.Drawing.Size(96, 32);
+            minbiz.Location = new Point(ClientRectangle.Width - minbiz.Size.Width - 92 - rendben.Width, ClientRectangle.Height - minbiz.Size.Height - 16);
+            minbiz.Click += minbiz_Click;
+            
             Controls.Add(label_név);
             Controls.Add(label_típus);
             Controls.Add(label_tábla);
             Controls.Add(rendben);
             Controls.Add(csere);
+            Controls.Add(minbiz);
+        }
+
+        void minbiz_Click(object sender, EventArgs e)
+        {
+            laborconnection.Open();
+            SqlCommand command = laborconnection.CreateCommand();
+            command.CommandText = "INSERT INTO L_MINBIZ (MISZ1M,MISZ1A,MISZ2M,MISZ2A) VALUES(" +
+                "'Alulírott Marillen Kft. kijelenti, hogy a fenti termék mindenben megfelel az érvényes magyar előírásoknak.'," +
+                "'Marillen Kft. certifies that the above mentioned product is in accordance with current Hungarian legislation.'," +
+                "'Alulírott Marillen Kft. nevében kijelentem, hogy az általunk gyártott aszeptikus velő nem génmanipulált termék. Génmanipulált alap- és segédanyagokat, ill. allergén anyagokat nem tartalmaz.'," +
+                "'Aseptic purees produced by Marillen Ltd. are not genetically modified and don’t contain any genetically modified raw materials and additives.')";
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                return;
+            }
+            finally
+            {
+                MessageBox.Show("Sikeres módosítás", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                command.Dispose();
+                laborconnection.Close();
+            }
         }
 
         void csere_Click(object sender, EventArgs e)
