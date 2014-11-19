@@ -1,0 +1,22 @@
+﻿#			Labor program konfigurációs adatai
+#
+#	MSSQL Szerver elérési címe
+server=.\SQLEXPRESS
+#	Szerver biztonsági beállítása
+integrated_security
+#
+#	Marillen adatbázis neve
+marillen_database=Marillen2014
+#	Labor adatbázis neve
+labor_database=labor
+#	SQL-felhasználó neve
+sql_username=l_labor
+#	SQL-felhasználó jelszava
+sql_password=labor
+#
+#	Az ablakok frissítési ideje
+#ui_refresh=10
+#	Belépéskor a 'Felhasználó név' kezdőértéke
+#ui_login_name=admin
+#	Felugró ablakok rendezése egymás mellé/mindig középre
+ui_manual_locations
